@@ -1,5 +1,79 @@
-﻿@*
-    
-*@
-@{
+﻿@{
+    Layout = null;
 }
+<head>
+    <title>INDEX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/main.css" />
+    <script src="https://kit.fontawesome.com/c1d53d3d78.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="mySidenav" class="sidenav" style="margin-top: 50px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- 네비게이션 바 시작 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid mainMenu">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="collapse navbar-collapse menu-wrap" id="bs-example-navbar-collapse-1 content" style="float: left">
+                <ul class="nav navbar-nav menu">
+                    <li>
+                        <a><i class="fas fa-bars fa-lg" onclick="openNav()"></i></a>
+                    </li>
+                    <li>
+                        <a href="/" style="padding: 5px;"><h4>TRIPBOX</h4></a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu-wrap" id="bs-example-navbar-collapse-1 content" style="float: right">
+                <ul class="nav navbar-nav menu">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/">마이페이지</a>
+                    </li>
+                    <li>
+                        <a id="joinmenu" asp-action="SignUp" asp-controller="Account">가입</a>
+                    </li>
+                    <li>
+                        <a id="loginmenu" href="/">로그인</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- 네비게이션 바 끝 -->
+    <!-- 점보트론 시작 -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>
+                <span style="color:black">TRIP BOX</span>
+            </h1>
+        </div>
+    </div>
+</body>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
